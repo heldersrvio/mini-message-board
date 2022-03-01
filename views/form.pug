@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+  h1= 'Submit a message'
+  form(method='POST' action='/new')
+    p
+      label(for='author')= 'Name: '
+      input#author(type='text' name='author' required)
+    p 
+      label(for='message')= 'Message: '
+      textarea#message(name='message' required rows='10' cols='70')
+    button(type='submit')= 'Submit'

@@ -1,5 +1,14 @@
 extends layout
 
 block content
+  - const formatDate = (date) => {
+      - return new Date(date.getTime() - (date.getTimezoneOffset() * 60 * 1000)).toISOString().split('T')[0];
+  - };
   h1= title
-  p Welcome to #{title}
+  ul
+    each message in messages
+      li
+        h2= message.text 
+        span= message.user 
+        span #{formatDate(message.added)}
+  a(href='/new')= 'New message'
