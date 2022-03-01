@@ -16,7 +16,8 @@ module.exports = {
 		'prefer-arrow-callback': 'warn',
 		'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
 		'comma-dangle': ['warn', 'always-multiline'],
-		'prefer-const': ['warn'],
+		'prefer-const': ['error'],
 		'no-undef': ['warn'],
+		'no-var': ['error'],
 	},
 };
